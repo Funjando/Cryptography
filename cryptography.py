@@ -21,6 +21,33 @@ if keystroke=="e":
     key=input("Key:")
     k=len(key)
     m=len(mess)
+    cryptm=[]
+    cryptk=[]
+    
+    if m>k:
+        count=key*int((m-(m%k))/k)
+        trun=key[0:(m%k)]
+        newkey=count+trun
+    elif k>m:
+        newkey=key[0:m] 
+        print(newkey, message)
+   
+    for x in mess:
+        cryptm.append(x)
+    for x in key:
+        
+    
+    for x in cryptm:
+        print(associations[x], end="")
+    
+    
+    
+elif keystroke=="d":
+    mess=input("Message:")
+    key=input("Key:")
+    k=len(key)
+    m=len(mess)
+    cryptm=[]
     
     if m>k:
         count=key*int((m-(m%k))/k)
@@ -32,15 +59,9 @@ if keystroke=="e":
    
     for x in mess:
         for y in key:
-            cryptm.append(associations.find(x)+associations.find(y))
+            cryptm.append(associations.find(x)-associations.find(y))
     for x in cryptm:
-        print(associations[x])
-    
-    
-    
-elif keystroke=="d":
-    mess=input("Message:")
-    key=input("Key:")
+        print(associations[x], end="")
     
 elif keystroke=="q":
     ...
