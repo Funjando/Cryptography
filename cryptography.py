@@ -40,11 +40,11 @@ if keystroke=="e":
         cryptk.append(associations.find(x))
     
     
-    encrypt.append([sum(x) for x in zip(cryptm, cryptk)])
+    encrypt=[sum(x) for x in zip(cryptm, cryptk)]
     
     for x in encrypt:
         tencrypt.append(associations[x])
-    print(tencrypt)
+    print(tencrypt, end="")
     
     
 if keystroke=="d":
