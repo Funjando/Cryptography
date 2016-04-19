@@ -54,6 +54,7 @@ if keystroke=="d":
     key=input("Key:")
     k=len(key)
     m=len(mess)
+    mes=[]
     cryptm=[]
     cryptk=[]
     decrypt=[]
@@ -67,8 +68,10 @@ if keystroke=="d":
         print(newkey, message)
    
     
+    for x in mess:
+        mes.append(associations.find(x))
     
-    decrypt.append(x-y for x, y in zip(mess, newkey))
+    decrypt.append(x-y for x, y in zip(mes, newkey))
     
     #decrypt.append([sum(x) for x in zip(cryptm, cryptk)])
     
