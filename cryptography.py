@@ -34,7 +34,7 @@ if keystroke=="e":
    
     for x in mess:
         cryptm.append(x)
-    for x in key:
+    for x in newkey:
         
     
     for x in cryptm:
