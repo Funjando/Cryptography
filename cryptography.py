@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Andreas Moberg
-Credit: Payton (for mad math skillz)
+Credit: Payton (for mad math skillz), Ashwini Chauswerry
 
 Assignment:
 
@@ -39,7 +39,7 @@ if keystroke=="e":
         cryptk.append(association.find(x))
     
     
-    encrypt.append(sum(x))
+    encrypt.append([sum(x) for x in zip(cryptm, cryptk)]
     
     
     
