@@ -23,6 +23,7 @@ if keystroke=="e":
     m=len(mess)
     cryptm=[]
     cryptk=[]
+    encrypt=[]
     
     if m>k:
         count=key*int((m-(m%k))/k)
@@ -33,12 +34,12 @@ if keystroke=="e":
         print(newkey, message)
    
     for x in mess:
-        cryptm.append(x)
+        cryptm.append(association.find(x))
     for x in newkey:
-        
+        cryptk.append(association.find(x))
     
-    for x in cryptm:
-        print(associations[x], end="")
+    
+    encrypt.append(sum(x))
     
     
     
