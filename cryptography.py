@@ -39,7 +39,7 @@ if keystroke=="e":
         cryptk.append(association.find(x))
     
     
-    encrypt.append([sum(x) for x in zip(cryptm, cryptk)]
+    encrypt.append([sum(x) for x in zip(cryptm, cryptk)])
     
     
     
