@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Andreas Moberg
-Credit: Payton (for mad math skillz), Ashwini Chauswerry
+Credit: Payton (for mad math skillz), Ashwini Chauswerry, UncleZiev
 
 Assignment:
 
@@ -13,7 +13,7 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 keystroke=input("Enter e to encrypt, d to decrypt, or q to quit:")
 
-cryptm=[]
+
 
 
 if keystroke=="e":
@@ -24,6 +24,7 @@ if keystroke=="e":
     cryptm=[]
     cryptk=[]
     encrypt=[]
+    tencrypt=[]
     
     if m>k:
         count=key*int((m-(m%k))/k)
@@ -34,13 +35,16 @@ if keystroke=="e":
         print(newkey, message)
    
     for x in mess:
-        cryptm.append(association.find(x))
+        cryptm.append(associations.find(x))
     for x in newkey:
-        cryptk.append(association.find(x))
+        cryptk.append(associations.find(x))
     
     
     encrypt.append([sum(x) for x in zip(cryptm, cryptk)])
     
+    for x in encrypt:
+        tencrypt.append(associations[x])
+    print(tencrypt)
     
     
 if keystroke=="d":
@@ -49,6 +53,8 @@ if keystroke=="d":
     k=len(key)
     m=len(mess)
     cryptm=[]
+    cryptk=[]
+    decrypt=[]
     
     if m>k:
         count=key*int((m-(m%k))/k)
@@ -58,11 +64,13 @@ if keystroke=="d":
         newkey=key[0:m] 
         print(newkey, message)
    
-    for x in mess:
-        for y in key:
-            cryptm.append(associations.find(x)-associations.find(y))
-    for x in cryptm:
-        print(associations[x], end="")
+    
+    
+    decrypt.append(x-y for x, y in zip(mess, newkey))
+    
+    #decrypt.append([sum(x) for x in zip(cryptm, cryptk)])
+    
+    print(decrypt)
     
 elif keystroke=="q":
     ...
