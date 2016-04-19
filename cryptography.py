@@ -43,7 +43,7 @@ if keystroke=="e":
     
     
     
-elif keystroke=="d":
+if keystroke=="d":
     mess=input("Message:")
     key=input("Key:")
     k=len(key)
