@@ -11,6 +11,9 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
+#print(len(associations))
+#85
+
 keystroke=input("Enter e to encrypt, d to decrypt, or q to quit:")
 
 quit=False
@@ -43,6 +46,13 @@ if keystroke=="e":
     
     
     encrypt=[sum(x) for x in zip(cryptm, cryptk)]
+    
+    encrypt=[x-85 for x in encrypt]
+    
+#    for x in encrypt:
+#       if x>85:
+#            x.replace(x, x-85)
+    
     
     for x in encrypt:
         tencrypt.append(associations[x])
@@ -77,6 +87,8 @@ if keystroke=="d":
         
     
     decrypt=(x-y for x, y in zip(cryptm, cryptk))
+    
+    decrypt=[x+85 for x in decrypt]
     
     for x in decrypt:
         tdecrypt.append(associations[x])
