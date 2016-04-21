@@ -46,8 +46,10 @@ if keystroke=="e":
     
     
     encrypt=[sum(x) for x in zip(cryptm, cryptk)]
-    
-    encrypt=[x-85 for x in encrypt]
+    for x in encrypt:
+        if x>85:
+            encrypt=[x-85 for x in encrypt]
+        if x<85
     
 #    for x in encrypt:
 #       if x>85:
@@ -88,7 +90,7 @@ if keystroke=="d":
     
     decrypt=(x-y for x, y in zip(cryptm, cryptk))
     
-    decrypt=[x+85 for x in decrypt]
+    decrypt=[x-85 for x in decrypt]
     
     for x in decrypt:
         tdecrypt.append(associations[x])
