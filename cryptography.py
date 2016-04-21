@@ -33,23 +33,19 @@ if keystroke=="e":
     if m>k:
         count=key*int((m-(m%k))/k)
         trun=key[0:(m%k)]
-        newkey=count+trun
+        key=count+trun
     elif k>m:
-        newkey=key[0:m] 
+        key=key[0:m] 
         #print(newkey, message)
    
     for x in mess:
         cryptm.append(associations.find(x))
-    for x in newkey:
+    for x in key:
         cryptk.append(associations.find(x))
     
     
     encrypt=[sum(x) for x in zip(cryptm, cryptk)]
-    for x in encrypt:
-        if x>85:
-            encrypt=[(x-85) for x in encrypt]
-        if x<0:
-            encrypt=[(x+85) for x in encrypt]
+
     
 #    for x in encrypt:
 #       if x>85:
@@ -57,7 +53,7 @@ if keystroke=="e":
     
     
     for x in encrypt:
-        tencrypt.append(associations[x])
+        tencrypt.append(associations[x%85])
     for x in tencrypt:
         print(x, end="")
     
@@ -90,15 +86,10 @@ if keystroke=="d":
     
     
     decrypt=[x-y for x, y in zip(cryptm, cryptk)]
-    for y in decrypt:
-        if y>85:
-            decrypt=[(y-85) for y in decrypt]
-        if y<0:
-            decrypt=[(y+85) for y in decrypt]
     
     
     for x in decrypt:
-        tdecrypt.append(associations[x])
+        tdecrypt.append(associations[x%85])
     for x in tdecrypt:
         print(x, end="")
         
