@@ -17,7 +17,7 @@ keystroke=input("Enter e to encrypt, d to decrypt, or q to quit:")
 
 quit=False
 
-if keystroke != "e" or "d" or "q":
+if keystroke not in ["e", "d", "q"]:
     print("Did not understand command, try again.")
 
 if keystroke=="e":
@@ -89,7 +89,7 @@ if keystroke=="d":
         
     
     
-    decrypt=(x-y for x, y in zip(cryptm, cryptk))
+    decrypt=[x-y for x, y in zip(cryptm, cryptk)]
     for y in decrypt:
         if y>85:
             decrypt=[(y-85) for y in decrypt]
