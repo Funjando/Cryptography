@@ -49,7 +49,8 @@ if keystroke=="e":
     for x in encrypt:
         if x>85:
             encrypt=[x-85 for x in encrypt]
-        if x<85
+        if x<0
+            encrypt=[x+85 for x in encrypt]
     
 #    for x in encrypt:
 #       if x>85:
