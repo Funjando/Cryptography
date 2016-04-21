@@ -6,7 +6,6 @@ Credit: Payton (for mad math skillz), Ashwini Chauswerry, UncleZiev
 Assignment:
 
 Write and submit a program that encrypts and decrypts user data.
-
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
@@ -48,9 +47,9 @@ if keystroke=="e":
     encrypt=[sum(x) for x in zip(cryptm, cryptk)]
     for x in encrypt:
         if x>85:
-            encrypt=[x-85 for x in encrypt]
+            encrypt=[(x-85) for x in encrypt]
         if x<0:
-            encrypt=[x+85 for x in encrypt]
+            encrypt=[(x+85) for x in encrypt]
     
 #    for x in encrypt:
 #       if x>85:
@@ -91,11 +90,11 @@ if keystroke=="d":
     
     
     decrypt=(x-y for x, y in zip(cryptm, cryptk))
-    for x in decrypt:
-        if x>85:
-            decrypt=[x-85 for x in decrypt]
-        if x<0:
-            decrypt=[x+85 for x in decrypt]
+    for y in decrypt:
+        if y>85:
+            decrypt=[(y-85) for y in decrypt]
+        if y<0:
+            decrypt=[(y+85) for y in decrypt]
     
     
     for x in decrypt:
