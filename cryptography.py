@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Andreas Moberg
-Credit: Payton (for mad math skillz), Ashwini Chauswerry, UncleZiev, Alejandro
+Credit: Payton (for mad math skillz), Ashwini Chauswerry, UncleZiev, Alejandro, Ethan
 
 Assignment:
 
@@ -21,8 +21,8 @@ if keystroke not in ["e", "d", "q"]:
     print("Did not understand command, try again.")
 
 if keystroke=="e":
-    mess=input("Message:")
-    key=input("Key:")
+    mess=input("Message: ")
+    key=input("Key: ")
     k=len(key)
     m=len(mess)
     cryptm=[]
@@ -59,8 +59,8 @@ if keystroke=="e":
     
     
 if keystroke=="d":
-    mess=input("Message:")
-    key=input("Key:")
+    mess=input("Message: ")
+    key=input("Key: ")
     k=len(key)
     m=len(mess)
     mes=[]
