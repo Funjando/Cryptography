@@ -13,7 +13,7 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 #print(len(associations))
 #85
 
-keystroke=input("Enter e to encrypt, d to decrypt, or q to quit:")
+keystroke=input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
 quit=False
 
