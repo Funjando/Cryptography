@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Andreas Moberg
-Credit: Payton (for mad math skillz), Ashwini Chauswerry, UncleZiev
+Credit: Payton (for mad math skillz), Ashwini Chauswerry, UncleZiev, Alejandro
 
 Assignment:
 
