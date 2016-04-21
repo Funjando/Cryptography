@@ -17,8 +17,8 @@ keystroke=input("Enter e to encrypt, d to decrypt, or q to quit:")
 
 quit=False
 
-#if keystroke != "e" or "d" or "q":
-    #print("Did not understand command, try again.")
+if keystroke != "e" or "d" or "q":
+    print("Did not understand command, try again.")
 
 if keystroke=="e":
     mess=input("Message:")
@@ -36,7 +36,7 @@ if keystroke=="e":
         newkey=count+trun
     elif k>m:
         newkey=key[0:m] 
-        print(newkey, message)
+        #print(newkey, message)
    
     for x in mess:
         cryptm.append(associations.find(x))
