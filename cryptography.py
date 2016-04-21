@@ -18,7 +18,7 @@ keystroke=input("Enter e to encrypt, d to decrypt, or q to quit: ")
 quit=False
 
 if keystroke not in ["e", "d", "q"]:
-    print("Did not understand command, try again.")
+    print("Did not understand command, try again. ")
 
 if keystroke=="e":
     mess=input("Message: ")
@@ -55,7 +55,7 @@ if keystroke=="e":
     for x in encrypt:
         tencrypt.append(associations[x%85])
     for x in tencrypt:
-        print(x, end="")
+        print(x, end=" ")
     
     
 if keystroke=="d":
@@ -91,13 +91,13 @@ if keystroke=="d":
     for x in decrypt:
         tdecrypt.append(associations[x%85])
     for x in tdecrypt:
-        print(x, end="")
+        print(x, end=" ")
         
     
 if keystroke=="q":
     quit=True
     print("Goodbye!")
-    
+
 
 
 
