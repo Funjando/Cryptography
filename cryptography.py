@@ -58,6 +58,7 @@ while infinity>0:
             tencrypt.append(associations[x%85])
         for x in tencrypt:
             print(x, end="")
+        print("")
     
     
     if keystroke=="d":
@@ -94,6 +95,7 @@ while infinity>0:
             tdecrypt.append(associations[x%85])
         for x in tdecrypt:
             print(x, end="")
+        print("")
         
     
     if keystroke=="q":
