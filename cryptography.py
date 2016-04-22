@@ -99,6 +99,7 @@ while infinity>0:
     if keystroke=="q":
         quit=True
         print("Goodbye!")
+        infinity=infinity-1
 
 
 
